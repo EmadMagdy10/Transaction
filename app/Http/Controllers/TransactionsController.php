@@ -47,38 +47,4 @@ class TransactionsController extends Controller
 
         return redirect()->back()->with('alert', 'done ');
     }
-
-
-
-
-
-    // public function store(Request $request): RedirectResponse
-    // {
-    //     if (User::where('username', $request->sendTo)->exists()) {
-    //         if (session('user_data')['balance'] > $request->amountTransfer) {
-    //             if (session('user_data')['username'] != $request->sendTo) {
-    //                 Transactions::create([
-    //                     'from_username' => session()->get('user_data')['username'],
-    //                     'transaction_amount' => $request->amountTransfer,
-    //                     'to_username' => $request->sendTo,
-    //                     'last_name' => $request->lastname,
-    //                 ]);
-    //                 $sender = User::where('id', session('user_data')['id'])->first();
-    //                 $sender->balance -= $request->amountTransfer;
-    //                 $sender->save();
-    //                 $receiver = User::where('username', $request->sendTo)->first();
-    //                 $receiver->balance += $request->amountTransfer;
-    //                 $receiver->save();
-    //             } else {
-    //                 return redirect()->back()->with('alert', 'can not transfer money to same account');
-    //             }
-    //         } else {
-    //             return redirect()->back()->with('alert', 'sorry you not have a money!');
-    //         }
-    //     } else {
-    //         return redirect()->back()->with('alert', 'user not found');
-    //     }
-
-    //     return redirect()->back()->with('alert', 'done ');
-    // }
 }
